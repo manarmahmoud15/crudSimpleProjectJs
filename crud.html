@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crud.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+<div class="w-75 mx-auto bg-info p-5 my-5">
+    <div class="form-inputs">
+    <div class="form-group mb-3">
+        <label for="productName">product-name</label>
+        <input class=" my-2 form-control" type="text"  id="productName">
+        <small class="text-muted">product name must be characters only</small>
+    </div>
+    <div class="form-group mb-3">
+        <label for="productprice">product-price</label>
+        <input class=" my-2 form-control" type="number"  id="productprice">
+        <small class="text-muted">product price must be numbers only</small>
+    </div>
+    <div class="form-group mb-3">
+        <label for="ProductCategory">product-category</label>
+        <input class=" my-2 form-control" type="text"   id="ProductCategory">
+        <small class="text-muted">product category must be characters only</small>
+    </div>
+    <div class="form-group mb-3">
+        <label for="ProductDescription">product-description</label>
+       <textarea class=" my-2 form-control" type="text" id="ProductDescription"></textarea>
+        <small class="text-muted">product description must be characters only</small>
+    </div>
+    <button  onclick="display()" id="main-btn" class="btn btn-primary mb-3 ">add product</button>
+</div>
+<div class="w-80 mb-3 mx-auto">
+    <label for="">Search by productName</label>
+    <input onkeyup="searchProduct(this.value)" class="form-control" type="text" name="">
+
+</div>
+<div class="data">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>name</th>
+                <th> price</th>
+                <th>category</th>
+                <th>description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+          
+        </tbody>
+    </table>
+</div>
+</div>
+<script src="crud.js">
+
+</script>
+</body>
+</html>
